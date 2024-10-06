@@ -63,3 +63,17 @@ CheckInternetStrength() {
     else
         return "Poor"
 }
+
+
+CheckWebsiteConnection(url) {
+    try {
+        whr := ComObject("WinHttp.WinHttpRequest.5.1")
+        whr.Open("GET", url, true)
+        whr.Send()
+        whr.WaitForResponse()
+        return true
+    } catch {
+        return false
+    }
+}
+
