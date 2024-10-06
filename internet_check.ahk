@@ -23,7 +23,7 @@ CheckInternetConnection() {
     }
     
     return false
-}CheckInternetConnection()
+}
 
 
 CheckInternetStrength() {
